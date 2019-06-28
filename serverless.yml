@@ -1,5 +1,5 @@
 service: serverless-load-balancer
-
+frameworkVersion: ">=1.4.5"
 plugins:
   - serverless-pseudo-parameters
 
