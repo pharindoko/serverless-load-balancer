@@ -1,0 +1,22 @@
+{
+  "name": "serverless-load-balancer",
+  "version": "1.0.0",
+  "description": "serverless framework sample that shows how to combine a load balancer with a lambda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pharindoko/serverless-load-balancer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pharindoko/serverless-load-balancer/issues"
+  },
+  "homepage": "https://github.com/pharindoko/serverless-load-balancer#readme",
+  "dependencies": {
+    "serverless-pseudo-parameters": "^2.4.0"
+  }
+}
