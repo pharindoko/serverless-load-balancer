@@ -8,7 +8,7 @@ provider:
   runtime: nodejs8.10
   region: eu-central-1
 custom:
-   file: ${file(./config/serverless.${self:provider.stage}.config.yml)} 
+   file: ${file(./config/serverless.config.yml)} 
 functions:
   handler:
     handler: handler.handler

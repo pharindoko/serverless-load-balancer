@@ -11,7 +11,7 @@ npm install
 ```
 
 ## Modify Config
-Modify the file **/config/serverless.dev.config.yml** 
+Modify the file **/config/serverless.config.yml** 
 - VPC / Subnet configuration for load balancer
 - Scheme for load balancer ([see aws documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elastic-load-balancing-works.html#load-balancer-scheme))
 ```yaml

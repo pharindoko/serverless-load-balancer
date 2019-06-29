@@ -1,0 +1,5 @@
+VPC_ID: 'vpc-XXXXXXXX'
+SUBNET_ID_A: "subnet-XXXXXXXX"
+SUBNET_ID_B: "subnet-XXXXXXXX"
+SUBNET_ID_C: "subnet-XXXXXXXX"
+SCHEME: "internet-facing"
