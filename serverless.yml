@@ -1,5 +1,5 @@
 service: serverless-load-balancer
-frameworkVersion: ">=1.4.5"
+frameworkVersion: ">=1.4.6"
 plugins:
   - serverless-pseudo-parameters
 
@@ -18,6 +18,8 @@ functions:
           priority: 1
           conditions:
             path: /
+            method:
+               - GET
 resources:
    Outputs:
       LoadBalancerDNSName:
@@ -76,7 +78,7 @@ resources:
                   FixedResponseConfig:
                      StatusCode: 404
                      ContentType: 'application/json'
-                     MessageBody: 'not found'
+                     MessageBody: '{ "not": "found" }'
       LoadBalancerParam:
          Type: "AWS::SSM::Parameter"
          Properties:
