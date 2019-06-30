@@ -1,8 +1,16 @@
 # serverless-load-balancer
 serverless framework sample that shows how to combine a load balancer with (vpc/subnet configuration) with a lambda
 
-feature has been introduced in v 1.45 of serverless framework
+This feature has been introduced in v 1.45 of serverless framework
 - [see changelog 1.45](https://github.com/serverless/serverless/blob/master/CHANGELOG.md#1450-2019-06-12)
+
+
+**when to use load balancer instead of api gateway ?**
+- https://serverless-training.com/articles/save-money-by-replacing-api-gateway-with-application-load-balancer/
+- https://serverless-training.com/articles/api-gateway-vs-application-load-balancer-technical-details/
+
+
+
 
 ## Install Requirements
 ```
