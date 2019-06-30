@@ -1,16 +1,17 @@
 # serverless-load-balancer
-serverless framework sample that shows how to combine a load balancer with (vpc/subnet configuration) with a lambda
+serverless framework sample that shows how to deploy a load balancer (with vpc/subnet configuration) connected to a lambda in aws.
 
-This feature has been introduced in v 1.45 of serverless framework
-- [see changelog 1.45](https://github.com/serverless/serverless/blob/master/CHANGELOG.md#1450-2019-06-12)
+- creates a LoadBalancer, HTTP Listener and Lambda
+- links the Listener and Lambda
+- stores the LoadBalancerDNSName (url) in ParameterStore
+
+This feature has been introduced in v 1.45 and extended in 1.46 serverless framework
+- [see changelog](https://github.com/serverless/serverless/blob/master/CHANGELOG.md#1450-2019-06-12)
 
 
 **when to use load balancer instead of api gateway ?**
 - https://serverless-training.com/articles/save-money-by-replacing-api-gateway-with-application-load-balancer/
 - https://serverless-training.com/articles/api-gateway-vs-application-load-balancer-technical-details/
-
-
-
 
 ## Install Requirements
 ```
@@ -57,11 +58,8 @@ ServerlessDeploymentBucketName: serverless-load-balancer-serverlessdeploymentbuc
     Successfully executed lambda call via loadbalancer
 ```
 
-
 ## Additional things to know
 
-- This sample does not care if the lambda and the load balancer are both in a vpc. It could be mixed in anyway dependent of the scenario
+- This sample does not care if the lambda and the load balancer are both in a vpc. It could be mixed in anyway dependent of the use case
 
-- Currently the http request method cannot be set as listener rule via serverless.yml as condition for the event. This is currently not supported by the framework.
-
-- The load balancer url will be stored as Parameter in Parameter store. This helps to reference the loadbalancer url easily in other stacks.
+- The load balancer url will be stored as Parameter in Parameter store. This helps to reference the loadbalancer url easily tool-independent in other stacks.
